@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./IconComponent.scss";
-import { StoryDialog } from "../dialog/StoryDialog";
-import { TextField } from "@mui/material";
+import {StoryDialog} from "../dialog/StoryDialog";
+import {TextField} from "@mui/material";
 
 interface Props {
   title?: string;
   subtitle?: string;
   icon: string;
-  onUpdateField: (data: string, id: number, fieldName: string) => void;
+  onUpdateField: any;
   id: number;
 }
 
 const IconComponent = ({
-  title = "title",
-  subtitle = "subtitle",
-  icon = "add_circle_outline",
-  onUpdateField,
-  id,
-}: Props) => {
+                         title = "title",
+                         subtitle = "subtitle",
+                         icon = "add_circle_outline",
+                         onUpdateField,
+                         id,
+                       }: Props) => {
   const [showModal, setShowModal] = useState(false);
   const [editTitle, setEditTitle] = useState(false);
   const [editSubtitle, setEditSubtitle] = useState(false);
@@ -25,7 +25,7 @@ const IconComponent = ({
   return (
     <div className={"icon-component__container"}>
       <div className={"icon-component_image__container"}>
-        {showModal && <StoryDialog onUpdateField={onUpdateField} id={id} />}
+        {showModal && <StoryDialog onUpdateField={onUpdateField} id={id}/>}
 
         {icon && (
           <div className="img__container">

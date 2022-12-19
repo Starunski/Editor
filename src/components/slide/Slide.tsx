@@ -1,24 +1,22 @@
 import "./Slide.scss";
-import { useState } from "react";
+import {useState} from "react";
 import IconComponent from "../icon-component/IconComponent";
+import {ComponentData} from '../../App'
+import {
+  MouseEventHandler, ReactHTMLElement
+} from "../../../../../../../Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react";
 
-interface List {
-  id: number;
-  title: string;
-  subtitle: string;
-  icon: string;
-}
 interface IDnDState {
   draggedFrom: number | null;
   draggedTo: number | null;
   isDragging: boolean;
-  originalOrder: List[];
-  updatedOrder: List[];
+  originalOrder: any[];
+  updatedOrder: [];
 }
 
 interface Props {
-  list: List[];
-  setList: (value: List[]) => void;
+  list: any[];
+  setList: (value: any) => any;
 }
 const initialDnDState: IDnDState = {
   draggedFrom: null,
@@ -28,12 +26,12 @@ const initialDnDState: IDnDState = {
   updatedOrder: [],
 };
 
-export const Slide = ({ list, setList }: Props) => {
+export const Slide = ({list, setList}: Props) => {
   const [dragAndDrop, setDragAndDrop] = useState(initialDnDState);
 
   // onDragStart fires when an element
   // starts being dragged
-  const onDragStart = (event: any) => {
+  const onDragStart = (event: any  ) => {
     const initialPosition = Number(event.currentTarget.dataset.position);
 
     setDragAndDrop({
@@ -52,7 +50,7 @@ export const Slide = ({ list, setList }: Props) => {
   // onDragOver fires when an element being dragged
   // enters a droppable area.
   // In this case, any of the items on the list
-  const onDragOver = (event: any) => {
+  const onDragOver = (event: any ) => {
     // in order for the onDrop
     // event to fire, we have
     // to cancel out this one
@@ -67,14 +65,14 @@ export const Slide = ({ list, setList }: Props) => {
     const draggedTo = Number(event.currentTarget.dataset.position);
 
     const itemDragged = newList[draggedFrom];
-    const remainingItems = newList.filter((item: any, index: any) => index !== draggedFrom);
+    const remainingItems = newList.filter((item, index) => index !== draggedFrom);
 
-    newList = [...remainingItems.slice(0, draggedTo), itemDragged, ...remainingItems.slice(draggedTo)];
+    newList  = [...remainingItems.slice(0, draggedTo), itemDragged, ...remainingItems.slice(draggedTo)] as any;
 
     if (draggedTo !== dragAndDrop.draggedTo) {
       setDragAndDrop({
         ...dragAndDrop,
-        updatedOrder: newList,
+        updatedOrder: newList as any,
         draggedTo: draggedTo,
       });
     }
@@ -98,18 +96,18 @@ export const Slide = ({ list, setList }: Props) => {
     });
   };
 
-  const onUpdateField = (data: List, id: number, field: string) => {
-    setList((prev: List[]) => {
+  const onUpdateField = (data: string, id: number, field: any): any  => {
+    setList((prev: any) => {
       return prev.map((item: any) => ({
         ...item,
         [field]: item.id === id ? data : item[field],
-      }));
-    });
+      }))
+    })
   };
 
   return (
     <div className={"slide__container"}>
-      {list.map((item: any, index: any) => {
+      {list.map((item, index) => {
         return (
           <div
             key={index}

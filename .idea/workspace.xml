@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb97a173-2e2c-4e51-bf1a-037abd243728" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/Card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/card/card.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/dialog/StoryDialog.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icon-component/icon-component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icon-component/icon-component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icons-list/icons-list.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/icons-list/icons-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/title/title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/title/title.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/icons.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/react-app-env.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/icon-component/IconComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/icon-component/IconComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/slide/Slide.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/slide/Slide.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +75,8 @@
       <workItem from="1671200453655" duration="32149000" />
       <workItem from="1671441296177" duration="222000" />
       <workItem from="1671441543943" duration="2494000" />
+      <workItem from="1671456409279" duration="2216000" />
+      <workItem from="1671458651023" duration="1254000" />
     </task>
     <servers />
   </component>
