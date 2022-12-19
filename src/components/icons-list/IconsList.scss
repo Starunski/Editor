@@ -1,0 +1,14 @@
+.icons-list__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.icon__container:hover {
+  cursor: pointer;
+  color: #3b60ad;
+}
+
+.active {
+  color: green;
+}

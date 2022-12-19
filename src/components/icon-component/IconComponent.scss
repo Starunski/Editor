@@ -1,0 +1,48 @@
+.icon-component__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.icon-component_image__container {
+  width: 100px;
+  height: 100px;
+
+  .img__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img__container:hover {
+    cursor: pointer;
+    color: rgb(129, 119, 119);
+  }
+}
+
+.title, .subtitle {
+  width: 180px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px 0 5px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+.title:hover {
+  cursor: pointer;
+  color: rgb(129, 119, 119);
+}
+
+.subtitle:hover {
+  cursor: pointer;
+  color: rgb(129, 119, 119);
+}

@@ -1,49 +1,49 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import { IconsList } from "../icons-list/IconsList";
+import { useState } from "react";
 
-export const StoryDialog = () => {
-  const [open, setOpen] = React.useState(false);
+interface Props {
+  onUpdateField: any;
+  id: any;
+}
 
-  const handleClickOpen = () => {
-    setOpen(true);
+export const StoryDialog = ({ onUpdateField, id }: Props) => {
+  const [open, setOpen] = React.useState(true);
+  const [selected, setSelected] = useState("");
+
+  const handleClickClose = () => {
+    setOpen(false);
   };
 
-  const handleClose = () => {
+  const onSubmit = () => {
+    onUpdateField(selected, id, "icon");
     setOpen(false);
   };
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open alert dialog
-      </Button>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={onSubmit}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
-        </DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"Select icon"}</DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+          <IconsList selected={selected} setSelected={setSelected} />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
+          <Button onClick={handleClickClose}>Cancel</Button>
+          <Button onClick={onSubmit} autoFocus>
+            Select
           </Button>
         </DialogActions>
       </Dialog>
     </div>
   );
-}
+};
