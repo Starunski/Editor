@@ -1,13 +1,10 @@
-$blue: #687bf7;
-$lightblue: #72d9ef;
-$cyan: #79e7eb;
 
 .slide__container {
   margin: 0;
   padding: 0;
-  list-style: none;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
 
   .slide__item {
     display: flex;
@@ -17,46 +14,5 @@ $cyan: #79e7eb;
     margin-bottom: 0.1em;
     border-radius: 5px;
 
-    &:hover {
-      background: linear-gradient(to left, $blue, $lightblue);
-      color: white;
-
-      span {
-        background-color: $cyan;
-      }
-    }
-
-    span {
-      display: inline-block;
-      margin-right: 1em;
-      margin-left: 0.5em;
-      background-color: $lightblue;
-      width: 2em;
-      height: 2em;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: white;
-      font-weight: bold;
-      transition: background-color 100ms linear;
-    }
-
-    p {
-      transition: margin-left 50ms ease-in-out;
-    }
-
-    i {
-      margin-left: auto;
-      margin-right: 1em;
-    }
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
   }
 }
