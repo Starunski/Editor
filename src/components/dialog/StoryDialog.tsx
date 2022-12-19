@@ -8,8 +8,8 @@ import { IconsList } from "../icons-list/IconsList";
 import { useState } from "react";
 
 interface Props {
-  onUpdateField: any;
-  id: any;
+  onUpdateField: (data: string, id: number, fieldName: string) => void;
+  id: number;
 }
 
 export const StoryDialog = ({ onUpdateField, id }: Props) => {

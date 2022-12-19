@@ -7,7 +7,7 @@ interface Props {
   title?: string;
   subtitle?: string;
   icon: string;
-  onUpdateField: any;
+  onUpdateField: (data: string, id: number, fieldName: string) => void;
   id: number;
 }
 
@@ -19,7 +19,6 @@ const IconComponent = ({
   id,
 }: Props) => {
   const [showModal, setShowModal] = useState(false);
-  // const [selectedIcon, setSelectedIcon] = useState("");
   const [editTitle, setEditTitle] = useState(false);
   const [editSubtitle, setEditSubtitle] = useState(false);
 
@@ -60,7 +59,9 @@ const IconComponent = ({
           defaultValue={subtitle}
         />
       ) : (
-        <div className="subtitle" onClick={() => setEditSubtitle(true)}>{subtitle}</div>
+        <div className="subtitle" onClick={() => setEditSubtitle(true)}>
+          {subtitle}
+        </div>
       )}
     </div>
   );

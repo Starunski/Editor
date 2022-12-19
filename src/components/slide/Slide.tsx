@@ -2,7 +2,25 @@ import "./Slide.scss";
 import { useState } from "react";
 import IconComponent from "../icon-component/IconComponent";
 
-const initialDnDState: any = {
+interface List {
+  id: number;
+  title: string;
+  subtitle: string;
+  icon: string;
+}
+interface IDnDState {
+  draggedFrom: number | null;
+  draggedTo: number | null;
+  isDragging: boolean;
+  originalOrder: List[];
+  updatedOrder: List[];
+}
+
+interface Props {
+  list: List[];
+  setList: (value: List[]) => void;
+}
+const initialDnDState: IDnDState = {
   draggedFrom: null,
   draggedTo: null,
   isDragging: false,
@@ -10,7 +28,7 @@ const initialDnDState: any = {
   updatedOrder: [],
 };
 
-export const Slide = ({ list, setList }: { list: any; setList: any }) => {
+export const Slide = ({ list, setList }: Props) => {
   const [dragAndDrop, setDragAndDrop] = useState(initialDnDState);
 
   // onDragStart fires when an element
@@ -80,8 +98,8 @@ export const Slide = ({ list, setList }: { list: any; setList: any }) => {
     });
   };
 
-  const onUpdateField = (data: any, id: number, field: string) => {
-    setList((prev: any) => {
+  const onUpdateField = (data: List, id: number, field: string) => {
+    setList((prev: List[]) => {
       return prev.map((item: any) => ({
         ...item,
         [field]: item.id === id ? data : item[field],

@@ -2,7 +2,7 @@ import { __ICONS } from "../../icons";
 import "./IconsList.scss";
 
 interface Props {
-  selected: any;
+  selected: string;
   setSelected: (icon: string) => void;
 }
 
