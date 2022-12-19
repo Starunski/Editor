@@ -1,5 +1,6 @@
 {
   "name": "editor",
+  "homepage": " https://starunski.github.io/editor/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
